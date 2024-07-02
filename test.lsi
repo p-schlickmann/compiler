@@ -1,0 +1,9 @@
+
+if(22 > 23) {
+  print num;
+  someIdentifier = 30;
+  id_with_snake_case = 40;
+  id = 12;
+  print 12;
+
+}
