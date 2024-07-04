@@ -1,0 +1,16 @@
+if (c > d) {
+   name = 340;
+   array_not_supported = []
+   array_not_supported.push(name);
+
+   name = d;
+   if (d > name) {
+     print name;
+   } else% {
+     print 1001;
+   }
+
+   module_not_supported = a % b;
+   example = 100 - 10;
+   int ~invalid_name;
+}

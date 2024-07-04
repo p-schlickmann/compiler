@@ -1,0 +1,15 @@
+def invalid_lex_function () {
+    int first_var;
+    first_var = 20;
+    invalid_variable = &first_var;
+    a = b;
+    c = e;
+    22 > 30;
+    invalid_lex_division = 100/10 == 10;
+    if (invalid_lex_division) {
+      print 10;
+    }
+    int b;
+    b = 12 > 20 > 30 * 60;
+    return c;
+}

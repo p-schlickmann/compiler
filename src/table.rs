@@ -1,4 +1,3 @@
-
 use std::collections::HashMap;
 
 pub fn create_syntactic_table() -> HashMap<&'static str, HashMap<&'static str, &'static str>> {
@@ -118,7 +117,10 @@ pub fn create_syntactic_table() -> HashMap<&'static str, HashMap<&'static str, &
         m.insert("print", "");
         m.insert("return", "");
         m.insert("if", "");
+
+        // not sure how this worked? cause the original syntax table had two possible productions for `IFSTMT1`+`else` (it had also epsilon)
         m.insert("else", "else STMT");
+
         m.insert("$", "");
         m
     });

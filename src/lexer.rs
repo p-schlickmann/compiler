@@ -9,7 +9,7 @@ pub fn lex(file_path: &str) -> Result<Vec<String>, String> {
 
     let mut tokens = Vec::new();
     let mut line_num = 1;
-    let mut col_num = 0;
+    let mut col_num = 1;
 
     for line in reader.lines() {
         let line = line.map_err(|e| format!("Error reading line: {}", e))?;
@@ -107,7 +107,7 @@ pub fn lex(file_path: &str) -> Result<Vec<String>, String> {
             }
         }
         line_num += 1;
-        col_num = 0;
+        col_num = 1;
     }
 
     tokens.push("$".to_string()); // EOF marker

@@ -31,6 +31,7 @@ pub fn parse(input_str: &str) {
 
     let mut stack = vec!["MAIN", "$"];
 
+    #[allow(non_snake_case)]
     let mut X = stack[0];
     let mut a = input[0];
     let mut matched: Vec<&str> = Vec::new();
@@ -43,11 +44,19 @@ pub fn parse(input_str: &str) {
         action: String,
     }
 
+    fn truncate_string(s: &str, max_len: usize) -> String {
+        if s.len() > max_len {
+            format!("{}...", &s[..max_len])
+        } else {
+            s.to_string()
+        }
+    }
+
     fn generate_printable_row(matched: &Vec<&str>, stack: &Vec<&str>, input: &Vec<&str>, action: &str) -> TableRow {
         TableRow {
-            matched: matched.join(" "),
-            stack: stack.join(" "),
-            input: input.join(" "),
+            matched: truncate_string(&matched.join(" "), 25),
+            stack: truncate_string(&stack.join(" "), 25),
+            input: truncate_string(&input.join(" "), 25),
             action: action.to_string(),
         }
     }
@@ -84,7 +93,7 @@ pub fn parse(input_str: &str) {
     print_table(&table_rows);
 
     if a == "$" {
-        println!("✅ Parsed successfully!\n");
+        println!("\n✅ Parsed successfully!");
         println!("Matches: \"{}\"\n", matched.join(" "));
     } else {
         println!("⚠️ Parsed partially...");

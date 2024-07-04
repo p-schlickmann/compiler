@@ -1,0 +1,18 @@
+def wrong_fn [] {
+  if (c > b) {
+    print a;
+  }
+
+  # comments are not supported either!
+  if (100 > 100) {
+    b = 101;
+  } else {
+    print 101;
+  }
+
+  // comments like this also don't work
+  print b;
+  print c;
+
+  print :ruby_symbol;
+}
