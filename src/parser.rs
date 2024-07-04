@@ -44,9 +44,14 @@ pub fn parse(input_str: &str) {
         action: String,
     }
 
-    fn truncate_string(s: &str, max_len: usize) -> String {
+    fn truncate_string(s: &str, max_len: usize, revert_ellipse: bool) -> String {
         if s.len() > max_len {
-            format!("{}...", &s[..max_len])
+            if revert_ellipse {
+                format!("...{}", &s[s.len() - max_len..])
+            } else {
+                format!("{}...", &s[..max_len])
+            }
+
         } else {
             s.to_string()
         }
@@ -54,9 +59,9 @@ pub fn parse(input_str: &str) {
 
     fn generate_printable_row(matched: &Vec<&str>, stack: &Vec<&str>, input: &Vec<&str>, action: &str) -> TableRow {
         TableRow {
-            matched: truncate_string(&matched.join(" "), 25),
-            stack: truncate_string(&stack.join(" "), 25),
-            input: truncate_string(&input.join(" "), 25),
+            matched: truncate_string(&matched.join(" "), 30, true),
+            stack: truncate_string(&stack.join(" "), 25, false),
+            input: truncate_string(&input.join(" "), 25, false),
             action: action.to_string(),
         }
     }

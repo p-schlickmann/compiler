@@ -1,9 +1,13 @@
+def defe() {
+    print oi;
+}
+
 def wrong_fn [] {
   if (c > b) {
     print a;
   }
 
-  # comments are not supported either!
+  # comments are not supported!
   if (100 > 100) {
     b = 101;
   } else {

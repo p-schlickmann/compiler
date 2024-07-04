@@ -1,8 +1,13 @@
-def invalid_lex_function () {
+def invalid_lex_sample () {
+    int variable_with_numbers0123;
+    variable_with_numbers0123 = 10;
+
     int first_var;
     first_var = 20;
     invalid_variable = &first_var;
-    a = b;
+
+    print "strings are not supported";
+
     c = e;
     22 > 30;
     invalid_lex_division = 100/10 == 10;

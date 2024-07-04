@@ -1,0 +1,18 @@
+def defFunctionWithCamelCaseAndNumbers777intAndReservedKeywords() {
+    some_var = 10;
+    is_hundred_bigger_than_ten = 100 > 10;
+    if is_hundred_bigger_than_ten {
+        print if_statement_without_parenthesis
+    }
+
+    var_with_3_nums = 123;
+    return var_with_3_nums;
+
+    if (b > c > a > d) def oi () {
+        print variable;
+    } else {
+        print abc < def;
+    }
+
+    print da_um_10_professor;
+}

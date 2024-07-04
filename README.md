@@ -1,22 +1,21 @@
-# Simple Rust compiler
+# Simple Rust Compiler
 
 Based on the [Dragon Book](https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools), this compiler
-was crafted for the disciple "Introduction to Compilers", ministred at Federal University of Santa Catarina in the
-first semester of 2024. This project the first 2 phases of compilation:
+was crafted for the course "Introduction to Compilers," taught at the Federal University of Santa Catarina in the
+first semester of 2024. This project includes the first two phases of compilation:
 1. Lexical analysis
 2. Syntactical analysis
 
-## Running the compiler
-Notice there are several `.lsi` files with some expressions to be analyzed by our compiler. Some of those files 
-include invalid expressions, that's on purpose so we can assure our lexer and parser work correctly. 
+## Running the Compiler
+There are several `.lsi` files with expressions to be analyzed by our compiler. Some of these files include invalid expressions; this is on purpose so we can ensure our lexer and parser work correctly.
 To test it yourself, run:
 ```bash
-cargo run test.lsi # test.lsi refers to the filename
+cargo run examples/0-valid-small.lsi
 ```
 Make sure cargo is installed. [Installation link](https://doc.rust-lang.org/cargo/getting-started/installation.html)
 
 ## Grammar
-The grammar for this compiler was provided by our teacher, Daniel Santana de Freitas. Our task was to refactor the grammar, remove left side recursion and make it LL(1). This was the result:
+The grammar for this compiler was provided by our teacher, Daniel Santana de Freitas. Our task was to refactor the grammar, remove left recursion and make it LL(1). This was the result:
 
 ```
 MAIN -> STMT
@@ -94,5 +93,4 @@ FACTOR -> id
 
 ## Parse Table
 For simplicity reasons, our parse table is hardcoded in [table.rs](./src/table.rs). The parse table was generated using the tool: https://jsmachines.sourceforge.net/machines/ll1.html. Big thank you to whoever created that!
-
-## 
+ 

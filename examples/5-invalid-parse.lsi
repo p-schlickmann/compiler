@@ -1,0 +1,15 @@
+def some_fn() {
+    with_semicolon = 100;
+    forgot_semicolon = 100
+
+    if (double_bracket) {{ print 10; }
+
+    if (10 > 20) {
+     print 10;
+     return;
+    }
+
+    int variable_to_be_returned;
+    variable_to_be_returned = 20;
+    return variable_to_be_returned;
+}

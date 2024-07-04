@@ -1,0 +1,10 @@
+def operations(int a, int b) {
+  int subtract_result;
+  subtract_result = a - b;
+  int multiplication_result;
+  multiplication_result = a * b;
+  if (subtract_result > multiplication_result) {
+    print subtract_result;
+  }
+  return;
+}

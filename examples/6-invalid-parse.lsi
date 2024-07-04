@@ -1,0 +1,16 @@
+if (a > b) {
+    return;
+} else {
+    print b;
+    print int b;
+
+    int invalid_type_declaration_combined_with_assignment = 10;
+
+    if (valid_if_statement) {
+      print(invalid_print_with_parenthesis);
+      if (10 > 20) {
+        int forgot_semicolon
+        print forgot_semicolon;
+      }
+    }
+}
