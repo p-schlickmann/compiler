@@ -1,7 +1,7 @@
 # Simple Rust Compiler
 
 Based on the [Dragon Book](https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools), this compiler
-was crafted for the course "Introduction to Compilers," taught at the Federal University of Santa Catarina in the
+was crafted for the course "Introduction to Compilers", taught at the Federal University of Santa Catarina in the
 first semester of 2024. This project includes the first two phases of compilation:
 1. Lexical analysis
 2. Syntactical analysis
