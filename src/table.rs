@@ -25,7 +25,7 @@ pub fn create_syntactic_table() -> HashMap<&'static str, HashMap<&'static str, &
 
     syntactic_table.insert("FLIST1", {
         let mut m = HashMap::new();
-        m.insert("def", "FDEF");
+        m.insert("def", "FLIST");
         m.insert("$", "");
         m
     });
