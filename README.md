@@ -24,7 +24,7 @@ MAIN -> ''
 
 FLIST -> FDEF FLIST1
 
-FLIST1 -> FDEF
+FLIST1 -> FLIST
 FLIST1 -> ''
 
 FDEF -> def id ( PARLIST ) { STMTLIST }
